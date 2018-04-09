@@ -4,8 +4,8 @@ Repo for the installation of NGINX with ModSecurity
 #### Logging in as root
 ```sudo su```
 
-#### The following might need internet. I am not able to figure out how to download the packages. yumdownloader probably does not work.
-```yum groupinstall -y "Development Tools"```
+#### Install required packages.
+```yum localinstall Development\ Tools/*```
 
 
 ```
