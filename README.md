@@ -146,10 +146,10 @@ sed -i "s/SecRuleEngine DetectionOnly/SecRuleEngine On/" /usr/local/nginx/conf/m
 
 
 #### Add OWASP ModSecurity CRS (Core Rule Set) files:
-#### Copy owasp/owasp-modsecurity-crs/ to /usr/local/nginx/conf/
+#### Copy owasp/owasp-modsecurity-crs to /usr/local/nginx/conf/
 ```
-cp owasp/owasp-modsecurity-crs/ /usr/local/nginx/conf
-cd /usr/local/nginx/conf
+cp -r owasp/owasp-modsecurity-crs /usr/local/nginx/conf/
+cd /usr/local/nginx/conf/owasp-modsecurity-crs/
 mv crs-setup.conf.example crs-setup.conf
 cd rules
 mv REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf
